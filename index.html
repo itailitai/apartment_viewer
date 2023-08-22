@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apartment Viewer</title>
+    <style>
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      #controls {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+      }
+      button {
+        margin: 5px;
+        background: rgba(0, 0, 0, 0.7);
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: 0.25s ease all;
+      }
+      button:hover {
+        background: black;
+        font-size: 1.1em;
+      }
+      #coords {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="coords"></div>
+    <div id="controls">
+      <button onclick="moveTo('bedroom')">Bedroom</button>
+      <button onclick="moveTo('kitchen')">Kitchen</button>
+      <button onclick="moveTo('bathroom')">Bathroom</button>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
